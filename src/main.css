@@ -4,82 +4,130 @@ body {
 }
 
 .teapot-sales-page {
-    min-height: 100vh;
-    padding: 2rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  }
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
 
-  .content-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-  }
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .product-info {
-    padding: 2rem;
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+.product-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
 
-  h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-  }
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
-  .tagline {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    margin-bottom: 2rem;
-  }
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin: 0;
+}
 
-  .features {
-    margin: 2rem 0;
-  }
+.tagline {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin: 0;
+}
 
-  .features ul {
-    padding: 0;
-  }
+.color-selection {
+  margin: 1rem 0;
+}
 
-  .features li {
-    margin: 1rem 0;
-    font-size: 1.1rem;
-  }
+.color-selection h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
 
-  .price-section {
-    margin-top: 2rem;
-  }
+.color-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-  .price {
-    font-size: 2rem;
-    color: #e74c3c;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
+.color-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-  .buy-button {
-    background: #2ecc71;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+.color-button:hover {
+  transform: scale(1.1);
+}
 
-  .buy-button:hover {
-    background: #27ae60;
-  }
+.color-button.selected {
+  border-color: #2c3e50;
+  transform: scale(1.1);
+}
 
-  .teapot-viewer {
-    height: 500px;
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
+.features {
+  margin: 1rem 0;
+}
+
+.features h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.features ul {
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.price-section {
+  margin-top: auto;
+}
+
+.price {
+  font-size: 2rem;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.buy-button {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.buy-button:hover {
+  background: #27ae60;
+}
+
+.teapot-viewer {
+  height: 500px;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
