@@ -1,38 +1,39 @@
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import { Teapot } from './Teapot';
 
 export function App() {
   return (
     <div className="teapot-sales-page">
       <div className="content-container">
         <div className="product-info">
-          <h1>The Revolutionary Quantum Teapot</h1>
-          <p className="tagline">Where Science Meets Tea Time!</p>
+          <h1>Чайник 3D</h1>
+          <p className="tagline">На один вимір більше в порівнянні з 2D чайником</p>
           
           <div className="features">
-            <h2>Features:</h2>
+            <h2>Характеристики:</h2>
             <ul>
-              <li>✨ Quantum-powered temperature control</li>
-              <li>🌌 Zero-gravity pouring technology</li>
-              <li>🎨 Customizable color-shifting finish</li>
-              <li>🤖 AI-powered tea strength detection</li>
+              <li>Красівий</li>
+              <li>Можна вертіти в просторі</li>
+              <li>Можна заварити тривимірний чай</li>
             </ul>
           </div>
 
           <div className="price-section">
-            <p className="price">Only $999.99</p>
-            <button className="buy-button">Add to Cart</button>
+            <p className="price">Всього лише 10⁵ гривень!</p>
+            <button className="buy-button">Купити не роздумуючи</button>
           </div>
         </div>
 
         <div className="teapot-viewer">
           <Canvas camera={{ position: [0, 0, 5] }}>
             <ambientLight intensity={0.5} />
-            <pointLight position={[10, 10, 10]} />
+            <directionalLight 
+              position={[0, 10, 0]} 
+              intensity={2}
+            />
             <OrbitControls />
-            <mesh>
-              <boxGeometry args={[1, 1, 1]} />
-            </mesh>
+            <Teapot color="#a8cdf7" />
           </Canvas>
         </div>
       </div>
